@@ -2,12 +2,14 @@ import express from 'express';
 import cors from 'cors';
 import { Pool } from 'pg';
 import dotenv from "dotenv";
+import path from "path";
 
 dotenv.config({path:"server/scout.env"})
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+app.use(express.static("public"));
 
 if (!process.env.DATABASE_URL)
 {
@@ -41,6 +43,12 @@ app.post('/api/query', async (req, res) =>
     res.status(500).json({ error: "Query failed", details: error });
   }
 });
+
+app.get("*",(_req,res) =>
+{
+  res.sendFile(path.join(__dirname,"public","index.html"));
+}
+);
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => 

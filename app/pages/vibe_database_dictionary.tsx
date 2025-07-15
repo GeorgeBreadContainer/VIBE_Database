@@ -7,7 +7,7 @@ export function Dictionary()
 {
     const [markdown, setMarkdown] = useState<string>("");
     useEffect(() => {
-        fetch("/files/dictionary.md")
+        fetch("/dictionary.md")
         .then((response) => {
         if(!response.ok) throw new Error("AAAAA");
         return response.text();

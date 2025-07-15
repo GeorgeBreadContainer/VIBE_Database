@@ -2,15 +2,12 @@ import express from 'express';
 import cors from 'cors';
 import { Pool } from 'pg';
 import dotenv from "dotenv";
-import path from "path";
 
 dotenv.config({path:"server/scout.env"})
 
 const app = express();
 app.use(cors());
 app.use(express.json());
-
-app.use("/public/files",express.static(path.join(__dirname,"files")));
 
 if (!process.env.DATABASE_URL)
 {

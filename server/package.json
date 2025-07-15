@@ -1,4 +1,5 @@
 {
+    "type":"module",
     "name": "vibe_server",
     "main": "index.js",
     "scripts":

@@ -10,6 +10,14 @@ export function Database()
             <Link to="/" className="text-blue-700 hover:underline dark:text-blue-500">
                 Home
             </Link>
+            <br></br>
+            <Link to="/vibe_database_query" className="text-blue-700 hover:underline dark:text-blue-500">
+                Query
+            </Link>
+            <br></br>
+            <Link to="/vibe_database_dictionary" className="text-blue-700 hover:underline dark:text-blue-500">
+                Dictionary
+            </Link>
         </main>
     )
 }

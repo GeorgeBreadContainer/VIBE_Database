@@ -6,7 +6,7 @@ type Row = { [column: string]: any };
 
 async function fetchQuery(sql: string): Promise<Row[]> 
 {
-  const res = await fetch("http://localhost:4000/api/query", 
+  const res = await fetch(`${import.meta.env.EXPRESS_API_URL}`, 
   {
     method: "POST",
     headers: { "Content-Type": "application/json" },

@@ -6,12 +6,14 @@ type Row = { [column: string]: any };
 
 async function fetchQuery(sql: string): Promise<Row[]> 
 {
-  const res = await fetch(`${import.meta.env.EXPRESS_API_URL}`, 
+ const res = await fetch(`${import.meta.env.VITE_EXPRESS_API_URL}`,
   {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ sql }),
   });
+  const text = await res.text();
+  console.log("Raw response:", text);
 
   if (!res.ok) 
   {
@@ -21,6 +23,7 @@ async function fetchQuery(sql: string): Promise<Row[]>
 
   return res.json();
 }
+
 
 export function Query() 
 {

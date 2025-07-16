@@ -12,8 +12,6 @@ async function fetchQuery(sql: string): Promise<Row[]>
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ sql }),
   });
-  const text = await res.text();
-  console.log("Raw response:", text);
 
   if (!res.ok) 
   {

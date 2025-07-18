@@ -8,9 +8,10 @@ export function Index()
       <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
         <div className="flex flex-col items-center gap-9">
           <div className="w-[500px] max-w-[100vw] p-4">
-            <h1 className="text-3xl font-bold underline dark:text-white">
+            <h1 className="text-3xl">
               Hey  
             </h1>
+            <br></br>
             <p>
               Welcome to my portfolio, as you can see the website is under construction.
               Go to the projects and find yourself a project that intrests you.

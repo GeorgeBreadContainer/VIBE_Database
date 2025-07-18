@@ -28,6 +28,9 @@ export function Dictionary()
             <Link to="/" className="text-blue-700 hover:underline dark:text-blue-500">
                 Home
             </Link>
+            <p>
+                Dictionary is incomplete.
+            </p>
             <div className="prose prose-xl dark:prose-invert max-w-3xl mx-auto p-8">
             <Markdown>{markdown}</Markdown>
             </div>

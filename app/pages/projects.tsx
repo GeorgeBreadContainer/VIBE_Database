@@ -12,7 +12,7 @@ export function Projects()
             </Link>
             <br></br>
             <Link to="/vibe_database" className="text-blue-700 hover:underline dark:text-blue-500">
-                Database
+                VIBE Database
             </Link>
         </main>
     )

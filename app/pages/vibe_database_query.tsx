@@ -54,17 +54,9 @@ export function Query()
       <Link to="/" className="text-blue-700 hover:underline dark:text-blue-500">Home</Link>
 
       <form onSubmit={handleSubmit} className="my-4">
-        <textarea
-          className="w-full p-2 border rounded font-mono"
-          rows={4}
-          value={sql}
-          onChange={(e) => setSql(e.target.value)}
-        />
-        <button
-          type="submit"
-          className="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-        >
-          Run Query
+        <textarea className="w-full p-2 border rounded font-mono" rows={4} value={sql} onChange={(e) => setSql(e.target.value)}/>
+        <button type="submit" className="mt-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+          Run
         </button>
       </form>
 

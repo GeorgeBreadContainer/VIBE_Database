@@ -8,10 +8,35 @@
 @custom-variant dark (&:where(.dark,.dark *));
 
 html,
-body {
-  @apply bg-white dark:bg-gray-950;
+body 
+{
+  @apply bg-neutral-300 dark:bg-gray-950;
 
-  @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme: dark) 
+  {
     color-scheme: dark;
   }
 }
+@layer base
+  {
+    main
+    {
+      @apply pt-16 p-4
+    }
+    h1
+    {
+      @apply text-2xl font-bold
+    }
+    h2 
+    {
+      @apply text-xl font-semibold mt-4 mb-2
+    }
+    a
+    {
+      @apply text-blue-700 hover:underline dark:text-blue-500
+    }
+    p
+    {
+      @apply text-base leading-relaxed mb-4
+    }
+  }

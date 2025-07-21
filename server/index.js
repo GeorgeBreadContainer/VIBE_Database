@@ -1,8 +1,6 @@
 import express from 'express';
 import cors from 'cors';
 import { Pool } from 'pg';
-import dotenv from "dotenv";
-import path from "path";
 
 const app = express();
 app.use(cors());
@@ -13,12 +11,9 @@ if (!process.env.DATABASE_URL)
   throw new Error("Missing DATABASE_URL in .env");
 }
 
-console.log("DB URL:", process.env.DATABASE_URL);
-
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
 });
-const port = parseInt(process.env.PORT || "4000", 10);
 
 app.post('/api/query', async (req, res) => 
 {
@@ -39,12 +34,6 @@ app.post('/api/query', async (req, res) =>
     console.error("Query error:", error);
     res.status(500).json({ error: "Query failed", details: error });
   }
-});
-
-const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => 
-{
-  console.log(`Server listening on port ${PORT}`);
 });
 
 app.get("/health", async (_req, res) => {

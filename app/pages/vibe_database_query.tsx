@@ -49,9 +49,13 @@ export function Query()
   };
 
   return (
-    <main className="pt-16 p-4">
-      <h1 className="text-3xl font-bold mb-4">Database Query</h1>
-      <Link to="/" className="text-blue-700 hover:underline dark:text-blue-500">Home</Link>
+    <main>
+      <h1>
+        Database Query
+      </h1>
+      <Link to="/">
+        Home
+      </Link>
 
       <form onSubmit={handleSubmit} className="my-4">
         <textarea className="w-full p-2 border rounded font-mono" rows={4} value={sql} onChange={(e) => setSql(e.target.value)}/>

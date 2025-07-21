@@ -3,8 +3,8 @@ import { Link } from "react-router";
 export function Database()
 {
     return(
-        <main className="pt-16 p-4">
-            <h1 className="text-3x1 font-bold">
+        <main>
+            <h1>
                 Database
             </h1>
             <p>
@@ -35,15 +35,15 @@ export function Database()
                 You can check the database structure to get tables, columns and views
 
             </p>
-            <Link to="/" className="text-blue-700 hover:underline dark:text-blue-500">
+            <Link to="/">
                 Home
             </Link>
             <br></br>
-            <Link to="/vibe_database_query" className="text-blue-700 hover:underline dark:text-blue-500">
+            <Link to="/vibe_database_query">
                 Query
             </Link>
             <br></br>
-            <Link to="/vibe_database_dictionary" className="text-blue-700 hover:underline dark:text-blue-500">
+            <Link to="/vibe_database_dictionary">
                 Dictionary
             </Link>
         </main>

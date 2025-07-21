@@ -39,4 +39,8 @@ body
     {
       @apply text-base leading-relaxed mb-4
     }
+    th,td
+    {
+      @apply border-1
+    }
   }

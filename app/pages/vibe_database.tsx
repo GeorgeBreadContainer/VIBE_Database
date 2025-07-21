@@ -46,6 +46,10 @@ export function Database()
             <Link to="/vibe_database_dictionary">
                 Dictionary
             </Link>
+            <br></br>
+            <Link to="/vibe_database_structure">
+                Structure
+            </Link>
         </main>
     )
 }

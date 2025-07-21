@@ -17,7 +17,4 @@ Firstly in the backend there are 2 servers hosted on [Render](https://render.com
 The first server hosts a database and the second express server is a middleman between the portfolio and the database, it uses the code from server/index.js.
 Lastly there's the server on [Vercel](https://vercel.com) that hosts the website - this portfolio. All of these servers have their limitations, for example: CPU usage, outbound bandwith, active connections.
 Vercel's [recommended approach](https://vercel.com/docs/deployments/sharing-deployments) to sharing websites is to manually invite users to see the website. The second approach is to share a public link and authorize an account - What I do. The third is to disable deployment protection, to disable authorization.
-Regardless of these options I can only have 1 other account see the website at any given point in time.
-
-### server/Index.js
-### 
+I can only have 1 other account see the website at any given point in time.
